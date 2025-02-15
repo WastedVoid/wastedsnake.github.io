@@ -25,3 +25,5 @@ This is a customizable Snake game built using HTML, CSS, and JavaScript. It feat
 This project is open source and available under the MIT License.
 
 
+###
+BY THE WAY, THIS PROJECT IS IN PROGRESS! IT WILL BE BUGGY AT FIRST BUT IT'S GETTING FIXED!
