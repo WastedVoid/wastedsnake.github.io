@@ -1,0 +1,66 @@
+/* style.css - Extra Custom Styling for a Sleek, Smooth, and Textured UI */
+
+/* Keyframe for fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  /* Gradient border for canvas with a subtle texture */
+  #gameContainer canvas {
+    border: 3px solid transparent;
+    border-image: linear-gradient(45deg, #6366F1, #3B82F6) 1;
+  }
+  
+  /* Smooth transition effects for overlays and panels */
+  #uiOverlay,
+  #controlButtons,
+  #settingsPanel {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Custom textured background for game container using a subtle pattern */
+  #gameContainer {
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+    background-size: auto;
+  }
+  
+  /* Custom focus and hover styles for buttons and inputs */
+  button:focus, input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.6);
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+  }
+  
+  /* Modern input focus style */
+  #settingsPanel input:focus {
+    border-color: #3B82F6;
+  }
+  
+  /* Custom scrollbar for settings panel */
+  #settingsPanel::-webkit-scrollbar {
+    width: 8px;
+  }
+  #settingsPanel::-webkit-scrollbar-track {
+    background: #2d2d2d;
+    border-radius: 4px;
+  }
+  #settingsPanel::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 4px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    #gameContainer {
+      max-width: 90%;
+    }
+  }
+  
