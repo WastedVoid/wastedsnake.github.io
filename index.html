@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Snake Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Custom Snake Game</h1>
+  </header>
+
+  <div id="gameContainer">
+    <canvas id="gameCanvas"></canvas>
+    <div id="scoreBoard">
+      <span id="score">Score: 0</span>
+      <span id="highScore">High Score: 0</span>
+    </div>
+    <div id="gameControls">
+      <button id="startButton">Start Game</button>
+      <button id="pauseButton" disabled>Pause</button>
+      <button id="settingsToggle">Settings</button>
+    </div>
+  </div>
+
+  <!-- Game Over Overlay -->
+  <div id="gameOverOverlay" class="hidden">
+    <div id="gameOverMessage">
+      <h2>Game Over!</h2>
+      <p id="finalScore"></p>
+      <button id="restartButton">Restart Game</button>
+    </div>
+  </div>
+
+  <!-- Settings Panel -->
+  <div id="settingsPanel" class="hidden">
+    <h2>Game Settings</h2>
+    <label for="snakeColor">Snake Color:</label>
+    <input type="color" id="snakeColor" value="#00FF00">
+    
+    <label for="foodColor">Food Color:</label>
+    <input type="color" id="foodColor" value="#FF0000">
+    
+    <label for="gameSpeed">Game Speed (ms per frame):</label>
+    <input type="number" id="gameSpeed" value="100" min="30" max="500">
+    
+    <label for="gridSize">Grid Size (px):</label>
+    <input type="number" id="gridSize" value="16" min="8" max="40">
+    
+    <label for="canvasWidth">Canvas Width (px):</label>
+    <input type="number" id="canvasWidth" value="400" min="200" max="800">
+    
+    <label for="canvasHeight">Canvas Height (px):</label>
+    <input type="number" id="canvasHeight" value="400" min="200" max="800">
+    
+    <button id="applySettings">Apply Settings</button>
+  </div>
+
+  <!-- Include Scripts -->
+  <script src="script.js"></script>
+  <script src="audio.js"></script>
+  <script src="touch.js"></script>
+  <script>
+    // Register service worker if supported
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(registration => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        }).catch(err => {
+          console.log('Service Worker registration failed:', err);
+        });
+    }
+  </script>
+</body>
+</html>
