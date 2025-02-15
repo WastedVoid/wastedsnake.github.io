@@ -8,5 +8,20 @@ This is a customizable Snake game built using HTML, CSS, and JavaScript. It feat
 - **Offline Support:** Play the game offline via a service worker.
 - **Persistent High Score:** High score is saved using localStorage.
 
-## File Structure
+
+## How to Run
+
+1. Clone or download this repository.
+2. Open `index.html` in your browser. For offline support and service worker functionality, run a local server (e.g., using [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)).
+
+## Customization
+
+- Click the **Settings** button to open the settings panel.
+- Change snake color, food color, game speed, grid size, and canvas dimensions.
+- Click **Apply Settings** to restart the game with your new options.
+
+## License
+
+This project is open source and available under the MIT License.
+
 
